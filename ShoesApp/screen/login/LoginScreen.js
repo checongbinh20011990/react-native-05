@@ -2,9 +2,8 @@ import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native'
 import React, { useEffect } from 'react'
 import styles from './styles/styles'
 import LinearGradient from 'react-native-linear-gradient'
-import { checkLogin } from './LoginThunk'
+import { checkLogin, getLocalAccessToken } from './LoginThunk'
 import { useDispatch } from 'react-redux'
-import { getAccessToken } from './LoginSlice'
 
 export default function LoginScreen() {
     const bg_login = require('../../assets/images/bg_login.webp')
@@ -16,7 +15,9 @@ export default function LoginScreen() {
     const dispatch = useDispatch()
 
     useEffect(()=>{
-        dispatch(getAccessToken())
+        dispatch(getLocalAccessToken())
+
+
     },[])
 
     const onPressLogin = () => {
