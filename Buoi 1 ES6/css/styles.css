@@ -1,0 +1,20 @@
+
+.setBackground{
+    background-color: aqua;
+}
+
+#thep {
+    color: brown;
+}
+
+span {
+    color: red;
+}
+
+.demo-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 16px;
+}
